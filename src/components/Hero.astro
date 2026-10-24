@@ -1,0 +1,30 @@
+---
+import business from '../data/business.json';
+import { url } from '../lib/url';
+---
+
+<section class="hero">
+  <div class="wrapper">
+    <h1>{business.tagline}</h1>
+    <p>
+      Cleanings, fillings, whitening and orthodontics in one calm, modern office.
+      New patients are always welcome.
+    </p>
+    <a class="cta" href={url('#book')}>Book your first visit</a>
+  </div>
+</section>
+
+<style>
+  .hero {
+    background: var(--surface-alt);
+    padding: 5rem 0;
+  }
+  .hero h1 {
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    max-width: 22ch;
+  }
+  .hero p {
+    max-width: 52ch;
+    color: var(--ink-soft);
+  }
+</style>

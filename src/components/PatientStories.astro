@@ -1,0 +1,45 @@
+---
+const stories = [
+  { name: 'Laura P.', quote: 'I used to be terrified of the dentist. Dr. Chen made it painless.' },
+  { name: 'Marcus T.', quote: 'They fit me in the same day when I cracked a tooth. Lifesavers.' },
+  { name: 'The Nguyen family', quote: 'Our kids actually look forward to their checkups.' },
+];
+---
+
+<section class="stories">
+  <div class="wrapper">
+    <h2>Patient stories</h2>
+    <ul>
+      {
+        stories.map((story) => (
+          <li>
+            <p>“{story.quote}”</p>
+            <span>{story.name}</span>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
+
+<style>
+  .stories {
+    background: var(--surface-alt);
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1.25rem;
+  }
+  li {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+  }
+  span {
+    font-weight: 700;
+    color: var(--brand-blue);
+  }
+</style>

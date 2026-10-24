@@ -1,0 +1,13 @@
+{
+  "name": "BrightSmile Dental",
+  "tagline": "Gentle dental care for the whole family.",
+  "phone": "618 555 0142",
+  "email": "appointments@brightsmile.example",
+  "address": "88 Oak Avenue, Suite 200, Springfield",
+  "hours": [
+    { "days": "Monday – Thursday", "time": "8:00 am – 6:00 pm" },
+    { "days": "Friday", "time": "8:00 am – 2:00 pm" },
+    { "days": "Saturday – Sunday", "time": "Closed" }
+  ],
+  "emergencyPhone": "618 555 0199"
+}

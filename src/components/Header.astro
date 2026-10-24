@@ -1,0 +1,44 @@
+---
+import business from '../data/business.json';
+import { url } from '../lib/url';
+---
+
+<header>
+  <div class="wrapper bar">
+    <a class="brand" href={url()}>{business.name}</a>
+    <nav>
+      <a href={url()}>Home</a>
+      <a href={url('team/')}>Our team</a>
+      <a class="cta" href={url('#book')}>Book a visit</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  header {
+    border-bottom: 1px solid var(--surface-alt);
+    padding: 0.75rem 0;
+  }
+  .bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .brand {
+    font-weight: 800;
+    font-size: 1.35rem;
+    color: var(--brand-blue);
+    text-decoration: none;
+  }
+  nav {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  nav a:not(.cta) {
+    color: var(--ink);
+    text-decoration: none;
+  }
+</style>

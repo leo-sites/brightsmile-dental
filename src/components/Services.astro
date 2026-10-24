@@ -1,0 +1,42 @@
+---
+const services = [
+  { title: 'Checkups & cleanings', text: 'Twice-a-year visits to keep your teeth and gums healthy.' },
+  { title: 'Fillings & crowns', text: 'Tooth-colored fillings and same-week crowns.' },
+  { title: 'Teeth whitening', text: 'In-office whitening in a single one-hour session.' },
+  { title: 'Clear aligners', text: 'Straighten your smile without metal braces.' },
+  { title: 'Kids dentistry', text: 'Friendly first visits for children from age 2.' },
+  { title: 'Emergency care', text: 'Same-day appointments for pain or broken teeth.' },
+];
+---
+
+<section>
+  <div class="wrapper">
+    <h2>Services</h2>
+    <div class="cards">
+      {
+        services.map((service) => (
+          <article>
+            <h3>{service.title}</h3>
+            <p>{service.text}</p>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1.25rem;
+  }
+  article {
+    border: 1px solid var(--surface-alt);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+  }
+  article p {
+    color: var(--ink-soft);
+  }
+</style>

@@ -1,0 +1,50 @@
+:root {
+  --brand-blue: #0b6fa4;
+  --brand-mint: #3cc6a8;
+  --surface: #ffffff;
+  --surface-alt: #eef7fb;
+  --ink: #12303f;
+  --ink-soft: #4d6876;
+  --radius: 0.75rem;
+  --font-sans: 'Helvetica Neue', Arial, sans-serif;
+  --content-width: 68rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--ink);
+  background: var(--surface);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--brand-blue);
+  line-height: 1.2;
+}
+
+.wrapper {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+section {
+  padding: 3.5rem 0;
+}
+
+.cta {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  border-radius: var(--radius);
+  background: var(--brand-mint);
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: none;
+}

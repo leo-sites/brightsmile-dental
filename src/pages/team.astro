@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const team = [
+  { name: 'Dr. Emily Chen, DDS', role: 'General dentist and founder', bio: 'Emily opened BrightSmile in 2012 and focuses on anxiety-free care.' },
+  { name: 'Dr. Samuel Ortiz, DMD', role: 'Orthodontist', bio: 'Samuel leads our clear aligner program and treats teens and adults.' },
+  { name: 'Hannah Brooks, RDH', role: 'Dental hygienist', bio: 'Hannah has been cleaning smiles for over 10 years.' },
+];
+---
+
+<Layout title="Our team" description="Meet the dentists and hygienists at BrightSmile Dental.">
+  <section>
+    <div class="wrapper">
+      <h1>Our team</h1>
+      <div class="people">
+        {
+          team.map((person) => (
+            <article>
+              <h2>{person.name}</h2>
+              <p class="role">{person.role}</p>
+              <p>{person.bio}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .people {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1.5rem;
+  }
+  .role {
+    color: var(--brand-mint);
+    font-weight: 700;
+  }
+</style>
